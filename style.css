@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+*,*::before,*::after {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.showcase{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  color: #fff;
+  transition: 0.4s;
+}
+
+
+.toggle{
+  z-index: 50;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: url(Assests/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.toggle:hover,.toggle.active:hover{
+  z-index: 50;
+  transform:scale(1.2);
+}
+.toggle.active{
+  z-index: 50;
+  background: url(Assests/close.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  transition: 0.4s;
+}
+
+.showcase header{
+  position:absolute;
+  top:0px;
+  left: 0px;
+  width: 100%;
+  padding: 40px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.showcase .logo a{
+  text-transform: uppercase;
+  color: #fff ;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+.nav{
+  z-index: 30;
+  position: relative;
+}
+.nav .nav_list ::before{
+  z-index: 31;
+  content: '';
+  position: absolute;
+  background: rgb(255, 255, 255);
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+.logo a:hover{
+  font-size: 25px;
+}
+.nav .nav_list:hover::before{
+  width: 100%;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text{
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+}
+
+.text h2 {
+  font-size: 5em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text p {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #111;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover{
+  font-size: 17.5px;
+}
+
+.social{
+  position: absolute;
+  left: 100px;
+  bottom: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+
+}
+.social li {
+  list-style: none;
+}
+.social li a {
+  display: inline-block;
+  margin-right: 20px;
+  transform: scale(0.5);
+  transition: 0.2s;
+}
+.social li a:hover {
+  transform: scale(0.6) translateY(-20px);
+}
+
+.menu_box{
+  display: none;
+  /* position: fixed;
+  display: flex;
+  top: 0;
+  right: 0px;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  background: rgba(1, 1, 1, 0.5); */
+}
+
+.menu ul li {
+  display: flex;
+  position: relative;
+  margin: auto;
+
+}
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color:#111;
+}
+
+.menu_box.active{
+  z-index: 40;
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0px;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  background: rgba(1, 1, 1, 0.5);
+}
+
+.menu_box.active ul {
+  z-index: 40;
+  display: flex;
+  list-style: none;
+  background: #fff;
+  height: 600px;
+  width: 600px;
+  max-width: 600px;
+  margin: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+@media (max-width: 991px) {
+  .showcase,
+  .showcase header{
+    padding: 40px
+  }
+
+  .text h2{
+    font-size: 3em;
+  }
+
+  .text h3{
+    font-size: 2em;
+  }
+}

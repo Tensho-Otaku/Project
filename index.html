@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Voyage</title>
+</head>
+<body>
+  <sec class="showcase">
+    <header>
+      <div class="nav"><div class="nav_list" ><h2 class="logo"><a href="#">Adventure</a></h2></div></div>
+      <div class="toggle"></div>
+    </header>
+
+    <video src="Assests/explore.mp4" muted autoplay loop></video>
+    <div class="overlay"></div>
+
+    <div class="text">
+      <h2>Never stop</h2>
+      <h3>Exploring the world</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde molestias excepturi aut voluptas debitis saepe ea iure sed hic quis?</p>
+      <a href="#">Explore</a>
+    </div>
+
+    <ul class="social">
+      <li><a href="#"><img src="Assests/facebook.png" alt="facebook.png"></a></li>
+      <li><a href="#"><img src="Assests/twitter.png" alt="twitter.png"></a></li>
+      <li><a href="#"><img src="Assests/instagram.png" alt="instagram.png"></a></li>
+    </ul>
+  </sec>
+  <div class="menu_box">
+    <div class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact-us</a></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    const menutoggle = document.querySelector('.toggle')
+    const Menu = document.querySelector('.menu_box')
+
+    menutoggle.addEventListener('click',() => {
+      menutoggle.classList.toggle('active')
+      Menu.classList.toggle('active')
+    })
+  </script>
+</body>
+</html>
