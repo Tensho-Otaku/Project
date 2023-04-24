@@ -262,3 +262,14 @@
     font-size: 2em;
   }
 }
+
+.explore {
+  border-radius: 2%;
+  outline-width: 3.5px;
+  outline-style: solid;
+  outline-color: white;
+}
+
+.explore:hover {
+  outline-offset: 3px;
+}
